@@ -20,17 +20,17 @@ class OnBoarding extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              DotControll(
+              DotControl(
                 color: AppColor.primaryColor,
                 size: 25,
               ),
               SizedBox(width: 5),
-              DotControll(
+              DotControl(
                 size: 10,
                 color: AppColor.grey1,
               ),
               SizedBox(width: 5),
-              DotControll(
+              DotControl(
                 size: 10,
                 color: AppColor.grey1,
               ),

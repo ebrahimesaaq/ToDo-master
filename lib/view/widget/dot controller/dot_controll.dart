@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class DotControll extends StatelessWidget {
+class DotControl extends StatelessWidget {
   final Color color;
   final double size;
-  const DotControll({super.key, required this.color, required this.size});
+  const DotControl({super.key, required this.color, required this.size});
 
   @override
   Widget build(BuildContext context) {
