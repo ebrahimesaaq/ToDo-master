@@ -1,48 +1,43 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:todo_master/core/consts/app_color.dart';
+import 'package:get/get.dart';
+import 'package:todo_master/controller/onBoarding/on_boarding_controller.dart';
 import 'package:todo_master/view/widget/On%20boarding/button_next.dart';
 import 'package:todo_master/view/widget/On%20boarding/button_skip.dart';
-import 'package:todo_master/view/widget/On%20boarding/page_view_on_boarding.dart';
-import 'package:todo_master/view/widget/dot%20controller/dot_controll.dart';
+import 'package:todo_master/view/widget/On%20boarding/custom_slider.dart';
+import 'package:todo_master/view/widget/dot/dot_controller.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.put(OnBoardingControllerImp());
     return Scaffold(
-      body: SafeArea(
+      body: const SafeArea(
           child: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 100),
-          Expanded(flex: 8, child: PageViewOnBoarding()),
+          Expanded(flex: 8, child: CustomSliderOnBoarding()),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              DotControl(
-                color: AppColor.primaryColor,
-                size: 25,
-              ),
-              SizedBox(width: 5),
-              DotControl(
-                size: 10,
-                color: AppColor.grey1,
-              ),
-              SizedBox(width: 5),
-              DotControl(
-                size: 10,
-                color: AppColor.grey1,
-              ),
+              DotController(),
               SizedBox(width: 5),
             ],
           ),
           SizedBox(
-            height: 20,
+            height: 25,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [ButtonSkip(), ButtonNext()],
+            children: [
+              //* buttons
+              ButtonSkip(),
+              ButtonNext()
+            ],
           ),
           Spacer(flex: 1),
         ],
