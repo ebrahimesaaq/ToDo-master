@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:todo_master/core/consts/routes.dart';
+import 'package:todo_master/data/datasource/static/static.dart';
 
 abstract class OnBoardingController extends GetxController {
   next();
@@ -14,6 +16,9 @@ class OnBoardingControllerImp extends OnBoardingController {
   @override
   next() {
     currentPage++;
+    if (currentPage > onBoardingList.length - 1) {
+      Get.offAllNamed(AppRoutes.login);
+    }
     pageController.animateToPage(currentPage,
         duration: const Duration(microseconds: 900), curve: Curves.easeInOut);
   }

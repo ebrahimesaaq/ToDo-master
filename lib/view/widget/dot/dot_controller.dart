@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:todo_master/controller/onBoarding/on_boarding_controller.dart';
 import 'package:todo_master/core/consts/app_color.dart';
 import 'package:todo_master/data/datasource/static/static.dart';

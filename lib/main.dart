@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:todo_master/core/localization/translation.dart';
+import 'package:todo_master/core/services/services.dart';
+import 'package:todo_master/routes.dart';
 import 'package:todo_master/view/screen/on_boarding.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  initServices();
   runApp(const MainApp());
 }
 
@@ -11,9 +16,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
+      translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
-      home: OnBoarding(),
+      home: const OnBoarding(),
+      theme: ThemeData(
+        textTheme: const TextTheme(),
+      ),
+      routes: myRoutes,
     );
   }
 }
