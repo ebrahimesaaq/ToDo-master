@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:todo_master/core/consts/app_color.dart';
 import 'package:todo_master/core/localization/translation.dart';
 import 'package:todo_master/core/services/services.dart';
 import 'package:todo_master/routes.dart';
@@ -21,6 +22,9 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const OnBoarding(),
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+            backgroundColor: AppColor.primaryColor,
+            titleTextStyle: TextStyle(color: AppColor.white, fontSize: 22)),
         textTheme: const TextTheme(),
       ),
       routes: myRoutes,
