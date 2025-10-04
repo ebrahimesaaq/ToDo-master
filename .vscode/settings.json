@@ -56,5 +56,23 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "cmake.sourceDirectory": "E:/Projects/A.S/ToDoMaster/todo_master/windows"
+  "cmake.sourceDirectory": "E:/Projects/A.S/ToDoMaster/todo_master/windows",
+  "cSpell.words": [
+    "imageasset",
+    "Survices",
+    "إنشاء",
+    "ادخل",
+    "الالكتروني",
+    "البريد",
+    "الدخول",
+    "المتابعة",
+    "المرور",
+    "تسجيل",
+    "حساب",
+    "دعنا",
+    "كلمة",
+    "لديك",
+    "نساعدك",
+    "نسيت"
+  ]
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_master/core/consts/language_list.dart';
+import 'package:todo_master/core/services/services.dart';
 
 abstract class MyLanguage extends GetxController {
   selectALang(BuildContext context);
@@ -19,11 +20,11 @@ class MyLanguageImp extends MyLanguage {
         .then((value) {
       if (value != null) {
         Get.updateLocale(Locale(value));
-        if (value == "ar") {
-          langCode = "ar";
-        } else {
-          langCode = "en";
-        }
+
+        final mySurvces = Get.find<MyServices>();
+        mySurvces.sharedPreferences.setString('lang', value);
+        langCode = value;
+        update();
       }
     });
     update();

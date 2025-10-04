@@ -13,6 +13,14 @@ class MyTranslation extends Translations {
           'OBTowBody':
               'قم بإدارة مهامك اليومية والشهرية والسنوية بسهولة مع ToDo Master.',
           'OBThreeBody': 'ابقَ مركزًا وحقق أهدافك مع ToDo Master.',
+          'LoginTitle': 'تسجيل الدخول',
+          'emailHint': 'ادخل البريد الالكتروني',
+          'passwordHint': 'ادخل كلمة المرور',
+          'forgetPassword': 'هل نسيت كلمة المرور؟',
+          'noAccount': 'ليس لديك حساب؟',
+          'signUp': 'إنشاء حساب',
+          'loginText': 'دعنا نساعدك في تسجيل الدخول',
+          'continueWith': 'أو المتابعة مع',
         },
         'en': {
           'homeAppBar': 'Home Page',
@@ -25,6 +33,14 @@ class MyTranslation extends Translations {
               'Effortlessly manage your daily, monthly, and \n yearly tasks with ToDo Master.',
           'OBThreeBody':
               'Stay focused and achieve your goals with \n ToDo Master.',
+          'LoginTitle': 'Login',
+          'emailHint': 'Enter your email',
+          'passwordHint': 'Enter your password',
+          'forgetPassword': 'Forget Password?',
+          'noAccount': "Don't have an account?",
+          'signUp': 'Sign Up',
+          'loginText': 'Lets get you signed in',
+          'continueWith': 'Or continue with',
         },
       };
 }
