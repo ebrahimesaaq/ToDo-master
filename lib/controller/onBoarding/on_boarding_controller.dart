@@ -21,7 +21,7 @@ class OnBoardingControllerImp extends OnBoardingController {
   next() {
     currentPage++;
     if (currentPage > onBoardingList.length - 1) {
-      Get.offAllNamed(AppRoutes.login);
+      Get.offAllNamed(AppRoutes.home);
     }
     pageController.animateToPage(currentPage,
         duration: const Duration(microseconds: 900), curve: Curves.easeInOut);

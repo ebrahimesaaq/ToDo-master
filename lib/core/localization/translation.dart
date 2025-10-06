@@ -21,6 +21,12 @@ class MyTranslation extends Translations {
           'signUp': 'إنشاء حساب',
           'loginText': 'دعنا نساعدك في تسجيل الدخول',
           'continueWith': 'أو المتابعة مع',
+          'SignUPTitle': 'إنشاء حساب',
+          'fullNameHint': 'ادخل اسم المستخدم',
+          'phoneHint': 'ادخل رقم الهاتف',
+          'haveAccount': 'هل لديك حساب؟',
+          'register': 'تسجيل',
+          'signupText': 'انضم إلى ToDo Master لإدارة مهامك بكفاءة',
         },
         'en': {
           'homeAppBar': 'Home Page',
@@ -41,6 +47,12 @@ class MyTranslation extends Translations {
           'signUp': 'Sign Up',
           'loginText': 'Lets get you signed in',
           'continueWith': 'Or continue with',
+          'SignUPTitle': 'Sign Up',
+          'fullNameHint': 'Enter your username',
+          'phoneHint': 'Enter your phone number',
+          'haveAccount': 'Already have an account?',
+          'register': 'Register',
+          'signupText': 'Join ToDo Master to manage your tasks efficiently',
         },
       };
 }

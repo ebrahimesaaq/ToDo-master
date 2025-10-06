@@ -6,7 +6,6 @@ import 'package:todo_master/core/localization/translation.dart';
 import 'package:todo_master/core/services/services.dart';
 import 'package:todo_master/routes.dart';
 import 'package:todo_master/view/screen/auth/login.dart';
-import 'package:todo_master/view/screen/on_boarding.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,14 +19,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ChangeLocal controller = Get.put(ChangeLocal());
-    MyServices myServices = Get.find<MyServices>();
     return GetMaterialApp(
       locale: controller.language,
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
-      home: myServices.sharedPreferences.getBool('onBoarding') == true
-          ? const Login()
-          : const OnBoarding(),
+      home: Login(),
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
             iconTheme: IconThemeData(color: AppColor.white),
