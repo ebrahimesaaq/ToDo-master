@@ -72,7 +72,15 @@ class SignUp extends StatelessWidget {
                       text: 'SignUPTitle'.tr,
                     )),
                 const SizedBox(height: 20.0),
-                Center(child: Text('continueWith'.tr)),
+                Row(
+                  children: [
+                    Expanded(child: Divider(color: Colors.grey)),
+                    SizedBox(width: 8.0),
+                    Center(child: Text('continueWith'.tr)),
+                    SizedBox(width: 8.0),
+                    Expanded(child: Divider(color: Colors.grey)),
+                  ],
+                ),
                 const SizedBox(height: 16.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -80,7 +88,7 @@ class SignUp extends StatelessWidget {
                     CustomIconButtonLogin(
                       hintText: 'Google',
                       imagePath: ImageAsset.google,
-                      onPressed: () {
+                      onPressed: () { 
                         // Handle Google login action
                       },
                     ),

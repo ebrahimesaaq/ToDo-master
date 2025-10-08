@@ -4,7 +4,7 @@ class MyTranslation extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'ar': {
-          'homeAppBar': 'الصفحة الرئيسية',
+          'homeAppBar': 'المهام',
           'language': 'العربية',
           'OBOneTitle': 'إدارة مهامك',
           'OBTowTitle': 'نظم حياتك',
@@ -27,9 +27,10 @@ class MyTranslation extends Translations {
           'haveAccount': 'هل لديك حساب؟',
           'register': 'تسجيل',
           'signupText': 'انضم إلى ToDo Master لإدارة مهامك بكفاءة',
+          'ToDay': 'اليوم',
         },
         'en': {
-          'homeAppBar': 'Home Page',
+          'homeAppBar': 'Tasks',
           'language': 'English',
           'OBOneTitle': 'Manage Your Task',
           'OBTowTitle': 'Organize Your Life',
@@ -53,6 +54,7 @@ class MyTranslation extends Translations {
           'haveAccount': 'Already have an account?',
           'register': 'Register',
           'signupText': 'Join ToDo Master to manage your tasks efficiently',
+          'ToDay': 'Today',
         },
       };
 }
