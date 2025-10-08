@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_master/core/consts/app_color.dart';
+import 'package:todo_master/view/widget/Tasks/floating_action_button_add_tastk.dart';
+import 'package:todo_master/view/widget/Tasks/tab_bar.dart';
+import 'package:todo_master/view/widget/Tasks/tasks_bottom_nav_bar.dart';
 import 'package:todo_master/view/widget/drawer.dart';
-import 'package:todo_master/view/widget/home/my_floating_action_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,70 +13,11 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-            currentIndex: 1,
-            onTap: (index) {},
-            items: const [
-              BottomNavigationBarItem(
-                  activeIcon: Icon(Icons.check_circle,
-                      color: AppColor.primaryColor, size: 30),
-                  icon: Icon(
-                    Icons.check_circle,
-                    color: AppColor.grey1,
-                    size: 20,
-                  ),
-                  label: 'Tasks'),
-              BottomNavigationBarItem(
-                  activeIcon: Icon(Icons.calendar_month_outlined,
-                      color: AppColor.primaryColor, size: 30),
-                  icon: Icon(
-                    Icons.calendar_month_outlined,
-                    color: AppColor.grey1,
-                    size: 20,
-                  ),
-                  label: 'Tasks'),
-              BottomNavigationBarItem(
-                  activeIcon: Icon(Icons.notifications,
-                      color: AppColor.primaryColor, size: 30),
-                  icon: Icon(
-                    Icons.notifications_none,
-                    color: AppColor.grey1,
-                    size: 20,
-                  ),
-                  label: 'Tasks'),
-              BottomNavigationBarItem(
-                  activeIcon: Icon(Icons.person_2_outlined,
-                      color: AppColor.primaryColor, size: 30),
-                  icon: Icon(
-                    Icons.person_2_outlined,
-                    color: AppColor.grey1,
-                    size: 20,
-                  ),
-                  label: 'Tasks'),
-            ]),
-        floatingActionButton: MyFloatingActionButton(
-            onPressed: () {},
-            icon: Icons.add,
-            backgroundColor: AppColor.primaryColor),
+        bottomNavigationBar: const TasksBottomNavBar(),
+        floatingActionButton: const FloatingActionButtonAddTask(),
         appBar: AppBar(
           title: Text('homeAppBar'.tr),
-          bottom: TabBar(
-            tabs: const [
-              Tab(
-                text: 'Daily',
-              ),
-              Tab(
-                text: 'Monthly',
-              ),
-              Tab(
-                text: 'Yearly',
-              ),
-            ],
-            indicatorColor: AppColor.white,
-            indicatorWeight: 3,
-            labelColor: AppColor.white,
-            unselectedLabelColor: AppColor.grey1,
-          ),
+          bottom: myTabBar,
         ),
         drawer: const MyDrawer(),
         body: TabBarView(children: const [
