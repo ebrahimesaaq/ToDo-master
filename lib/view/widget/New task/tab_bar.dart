@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:todo_master/core/consts/app_color.dart';
 
 PreferredSizeWidget myTabBar = TabBar(
-  tabs: const [
+  tabs: [
     Tab(
-      text: 'Daily',
+      text: 'categoryDaily'.tr,
     ),
     Tab(
-      text: 'Monthly',
+      text: 'categoryWeekly'.tr,
     ),
     Tab(
-      text: 'Yearly',
+      text: 'categoryMonthly'.tr,
+    ),
+    Tab(
+      text: 'categoryYearly'.tr,
     ),
   ],
   labelColor: AppColor.grey3,

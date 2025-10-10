@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_master/data/Tasks/category_list.dart';
 import 'package:todo_master/data/Tasks/priority_list.dart';
-import 'package:todo_master/view/widget/Tasks/category_drop_down.dart';
-import 'package:todo_master/view/widget/Tasks/due_date_form_field.dart';
-import 'package:todo_master/view/widget/Tasks/save_button.dart';
-import 'package:todo_master/view/widget/Tasks/task_note_form_field.dart';
-import 'package:todo_master/view/widget/Tasks/task_title_form_field.dart';
+import 'package:todo_master/view/widget/New%20task/category_drop_down.dart';
+import 'package:todo_master/view/widget/New%20task/due_date_form_field.dart';
+import 'package:todo_master/view/widget/New%20task/save_button.dart';
+import 'package:todo_master/view/widget/New%20task/task_note_form_field.dart';
+import 'package:todo_master/view/widget/New%20task/task_title_form_field.dart';
 
 class NewTask extends StatelessWidget {
   const NewTask({super.key});

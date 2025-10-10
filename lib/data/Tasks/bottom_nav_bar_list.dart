@@ -1,41 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:todo_master/core/consts/app_color.dart';
 
-List<BottomNavigationBarItem> bottomNavBarList = const [
+List<BottomNavigationBarItem> bottomNavBarList = [
   BottomNavigationBarItem(
-      activeIcon:
-          Icon(Icons.check_circle, color: AppColor.primaryColor, size: 30),
+      activeIcon: Icon(
+        Icons.check_circle,
+      ),
       icon: Icon(
         Icons.check_circle,
         color: AppColor.black,
         size: 20,
       ),
-      label: 'Tasks'),
+      label: 'Tasks'.tr),
   BottomNavigationBarItem(
-      activeIcon: Icon(Icons.calendar_month_outlined,
-          color: AppColor.primaryColor, size: 30),
+      activeIcon: Icon(
+        Icons.calendar_month_outlined,
+      ),
       icon: Icon(
         Icons.calendar_month_outlined,
         color: AppColor.black,
         size: 20,
       ),
-      label: 'Tasks'),
+      label: 'Dashboard'.tr),
   BottomNavigationBarItem(
-      activeIcon:
-          Icon(Icons.notifications, color: AppColor.primaryColor, size: 30),
+      activeIcon: Icon(
+        Icons.notifications,
+      ),
       icon: Icon(
         Icons.notifications_none,
         color: AppColor.black,
         size: 20,
       ),
-      label: 'Tasks'),
+      label: 'Notifications'.tr),
   BottomNavigationBarItem(
-      activeIcon:
-          Icon(Icons.person_2_outlined, color: AppColor.primaryColor, size: 30),
+      activeIcon: Icon(
+        Icons.person_2_outlined,
+      ),
       icon: Icon(
         Icons.person_2_outlined,
-        color: AppColor.black,
-        size: 20,
       ),
-      label: 'Tasks'),
+      label: 'Profile'.tr),
 ];

@@ -44,6 +44,12 @@ class MyTranslation extends Translations {
           'categoryMonthly': 'شهرية',
           'categoryYearly': 'سنوية',
           'save': 'حفظ',
+          'addSmallTask': 'إضافة مهمة',
+          'addLargeTask': 'إضافة مهمة كبيرة',
+          'Tasks': 'المهام',
+          'Dashboard': 'لوحة التحكم',
+          'Notifications': 'الإشعارات',
+          'Profile': 'الملف الشخصي',
         },
         'en': {
           'homeAppBar': 'Tasks',
@@ -87,6 +93,12 @@ class MyTranslation extends Translations {
           'categoryMonthly': 'Monthly',
           'categoryYearly': 'Yearly',
           'save': 'Save',
+          'addSmallTask': 'Add Task',
+          'addLargeTask': 'Add Large Task',
+          'Tasks': 'Tasks',
+          'Dashboard': 'Dashboard',
+          'Notifications': 'Notifications',
+          'Profile': 'Profile',
         },
       };
 }

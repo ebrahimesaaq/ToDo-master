@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_master/view/widget/Tasks/floating_action_button_add_tastk.dart';
-import 'package:todo_master/view/widget/Tasks/tab_bar.dart';
+import 'package:todo_master/view/widget/New%20task/tab_bar.dart';
 import 'package:todo_master/view/widget/Tasks/tasks_bottom_nav_bar.dart';
 import 'package:todo_master/view/widget/drawer.dart';
 
@@ -11,10 +11,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         bottomNavigationBar: const TasksBottomNavBar(),
         floatingActionButton: const FloatingActionButtonAddTask(),
+        floatingActionButtonLocation: Get.locale == const Locale('en')
+            ? FloatingActionButtonLocation.endFloat
+            : FloatingActionButtonLocation.startFloat,
         appBar: AppBar(
           title: Text('homeAppBar'.tr),
           bottom: myTabBar,
@@ -24,8 +27,9 @@ class HomePage extends StatelessWidget {
           Center(child: Text("Home Page")),
           Center(child: Text("Favorites Page")),
           Center(child: Text("Settings Page")),
+          Center(child: Text("Profile Page")),
         ]),
-        
+
         //   padding: const EdgeInsets.all(8.0),
         //   child: ListView(
         //     children: [
