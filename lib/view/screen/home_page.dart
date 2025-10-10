@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
           Center(child: Text("Favorites Page")),
           Center(child: Text("Settings Page")),
         ]),
-        // body: Padding(
+        
         //   padding: const EdgeInsets.all(8.0),
         //   child: ListView(
         //     children: [

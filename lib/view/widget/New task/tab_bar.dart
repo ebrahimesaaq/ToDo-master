@@ -15,6 +15,6 @@ PreferredSizeWidget myTabBar = TabBar(
   ],
   labelColor: AppColor.grey3,
   indicatorColor: AppColor.grey3,
-  indicatorWeight: 5,
+  // indicatorWeight: 5,
   unselectedLabelColor: AppColor.white,
 );

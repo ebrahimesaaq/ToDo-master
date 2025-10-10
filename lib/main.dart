@@ -5,7 +5,8 @@ import 'package:todo_master/core/localization/change_local.dart';
 import 'package:todo_master/core/localization/translation.dart';
 import 'package:todo_master/core/services/services.dart';
 import 'package:todo_master/routes.dart';
-import 'package:todo_master/view/screen/auth/login.dart';
+// import 'package:todo_master/view/screen/auth/login.dart';
+import 'package:todo_master/view/screen/new_task.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +24,8 @@ class MainApp extends StatelessWidget {
       locale: controller.language,
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: const NewTask(),
+      // home: Login(),
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
             iconTheme: IconThemeData(color: AppColor.white),
