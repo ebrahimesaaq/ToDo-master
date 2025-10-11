@@ -1,49 +1,75 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:floating_action_bubble/floating_action_bubble.dart';
 import 'package:get/get.dart';
 import 'package:todo_master/core/consts/app_color.dart';
 
-class MyFloatingActionButton extends StatelessWidget {
-  final VoidCallback onPressed;
-  final IconData icon;
-  final Color backgroundColor;
-  const MyFloatingActionButton(
-      {super.key,
-      required this.onPressed,
-      required this.icon,
-      required this.backgroundColor});
+class MyFloatingActionButton extends StatefulWidget {
+  final VoidCallback onAddSmallTask;
+  final VoidCallback onAddLargeTask;
+
+  const MyFloatingActionButton({
+    super.key,
+    required this.onAddSmallTask,
+    required this.onAddLargeTask,
+  });
+
+  @override
+  _MyFloatingActionButtonState createState() => _MyFloatingActionButtonState();
+}
+
+class _MyFloatingActionButtonState extends State<MyFloatingActionButton>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _animationController;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 260),
+    );
+
+    _animation =
+        CurvedAnimation(parent: _animationController, curve: Curves.easeInOut);
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SpeedDial(
-        icon: Icons.menu,
-        activeIcon: Icons.close,
-        backgroundColor: backgroundColor,
-        iconTheme: const IconThemeData(color: Colors.white),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
-        children: [
-          SpeedDialChild(
-            child: const Icon(
-              Icons.add,
-              color: AppColor.white,
-            ),
-            label: 'addSmallTask'.tr,
-            onTap: onPressed,
-            backgroundColor: AppColor.orange,
+      child: FloatingActionBubble(
+        animation: _animation,
+        onPress: () {
+          _animationController.isCompleted
+              ? _animationController.reverse()
+              : _animationController.forward();
+        },
+        iconColor: Colors.white,
+        iconData: Icons.menu,
+        backGroundColor: AppColor.primaryColor,
+        items: [
+          Bubble(
+            title: "addSmallTask".tr,
+            iconColor: Colors.white,
+            bubbleColor: AppColor.orange,
+            icon: Icons.add,
+            titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
+            onPress: widget.onAddSmallTask,
           ),
-          SpeedDialChild(
-            child: const Icon(
-              Icons.add,
-              color: AppColor.white,
-            ),
-            label: 'addLargeTask'.tr,
-            onTap: () {
-              // Define action for removing a task
-            },
-            backgroundColor: AppColor.orange,
+          Bubble(
+            title: "addLargeTask".tr,
+            iconColor: Colors.white,
+            bubbleColor: AppColor.orange,
+            icon: Icons.add,
+            titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
+            onPress: widget.onAddLargeTask,
           ),
         ],
       ),

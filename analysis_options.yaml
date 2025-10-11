@@ -2,9 +2,7 @@ include: package:flutter_lints/flutter.yaml
 
 analyzer:
   errors:
-    depend_on_referenced_packages: ignore
-    prefer_const_constructors: ignore
-
+    prefer_const_constructors: info
 linter:
   rules:
     prefer_const_constructors: true
