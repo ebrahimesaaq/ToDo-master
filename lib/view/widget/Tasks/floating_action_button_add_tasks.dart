@@ -11,7 +11,7 @@ class FloatingActionButtonAddTask extends StatelessWidget {
     return MyFloatingActionButton(onAddSmallTask: () {
       Get.toNamed(AppRoutes.newTask);
     }, onAddLargeTask: () {
-      Get.toNamed(AppRoutes.newTask);
+      Get.toNamed(AppRoutes.newLargeTask);
     });
   }
 }

@@ -8,8 +8,8 @@ import 'package:todo_master/view/widget/New%20task/save_button.dart';
 import 'package:todo_master/view/widget/New%20task/task_note_form_field.dart';
 import 'package:todo_master/view/widget/New%20task/task_title_form_field.dart';
 
-class NewTask extends StatelessWidget {
-  const NewTask({super.key});
+class NewLargeTask extends StatelessWidget {
+  const NewLargeTask({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +26,13 @@ class NewTask extends StatelessWidget {
             //? Task Title
             const TaskTitleFormField(),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 8),
             Text('taskNote'.tr, style: const TextStyle(fontSize: 18)),
 
             //? Task Note
             const TaskNoteFormField(),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 8),
             Text('category'.tr, style: const TextStyle(fontSize: 18)),
 
             //? Category
@@ -41,7 +41,7 @@ class NewTask extends StatelessWidget {
                 hintText: 'category'.tr,
                 onChanged: (value) {}),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 8),
             Text('priority'.tr, style: const TextStyle(fontSize: 18)),
 
             //? Priority
@@ -49,29 +49,35 @@ class NewTask extends StatelessWidget {
                 items: priorityList,
                 hintText: 'priority'.tr,
                 onChanged: (value) {}),
-            const SizedBox(height: 20),
+            const SizedBox(height: 8),
+            Text('elements'.tr, style: const TextStyle(fontSize: 18)),
+
+            //? Priority
+            TextFormField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: 'elements'.tr,
+                ),
+                onChanged: (value) {}),
+            const SizedBox(height: 8),
             Text('dueDate'.tr, style: const TextStyle(fontSize: 18)),
 
             //? Due Date
             const DueDateFormField(),
 
-            // Spacer(),
-            const Divider(
-              height: 30,
-              thickness: 1,
+            const SizedBox(
+              height: 8,
             ),
-            //? Save Button
 
-            Center(
-              child: SizedBox(
-                width: double.infinity,
-                height: 50,
+            //? Save button
+            SizedBox(
+                height: 40,
                 child: SaveButton(
-                  onPressed: () {},
-                ),
-              ),
-            ),
-            const SizedBox(height: 20),
+                  onPressed: () {
+                    Get.offNamed('/elements');
+                  },
+                ))
           ],
         ),
       ),

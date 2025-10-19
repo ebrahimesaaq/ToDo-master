@@ -3,6 +3,7 @@ import 'package:get/get_navigation/src/root/internacionalization.dart';
 class MyTranslation extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
+        //? Arabic
         'ar': {
           'homeAppBar': 'المهام',
           'language': 'العربية',
@@ -50,7 +51,13 @@ class MyTranslation extends Translations {
           'Dashboard': 'لوحة التحكم',
           'Notifications': 'الإشعارات',
           'Profile': 'الملف الشخصي',
+          'theTaskInfo': 'معلومات المهمة',
+          'theTaskSteps': 'خطوات المهمة',
+          'elements': 'العناصر',
+          'elementsName': 'اسم العنصر',
+          'welcome': 'مرحباً'
         },
+        //? English
         'en': {
           'homeAppBar': 'Tasks',
           'language': 'English',
@@ -99,6 +106,11 @@ class MyTranslation extends Translations {
           'Dashboard': 'Dashboard',
           'Notifications': 'Notifications',
           'Profile': 'Profile',
+          'theTaskInfo': 'Task Info',
+          'theTaskSteps': 'Task Steps',
+          'elements': 'Elements',
+          'elementsName': 'Element name',
+          'welcome': 'Welcome'
         },
       };
 }

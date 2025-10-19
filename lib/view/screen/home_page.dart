@@ -16,7 +16,10 @@ class HomePage extends StatelessWidget {
         bottomNavigationBar: const TasksBottomNavBar(),
         floatingActionButton: const FloatingActionButtonAddTask(),
         appBar: AppBar(
-          title: Text('homeAppBar'.tr),
+          title: Text(
+            '${'welcome'.tr} Beroesaaq',
+            textAlign: TextAlign.center,
+          ),
           bottom: myTabBar,
         ),
         drawer: const MyDrawer(),
