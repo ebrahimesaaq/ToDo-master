@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:todo_master/controller/user_controller.dart';
 import 'package:todo_master/view/widget/Tasks/floating_action_button_add_tasks.dart';
 import 'package:todo_master/view/widget/New%20task/tab_bar.dart';
 import 'package:todo_master/view/widget/Tasks/tasks_bottom_nav_bar.dart';
 import 'package:todo_master/view/widget/drawer.dart';
+import 'package:todo_master/view/widget/home/tab_bar_daily.dart';
+import 'package:todo_master/view/widget/home/tab_bar_monthly.dart';
+import 'package:todo_master/view/widget/home/tab_bar_weekly.dart';
+import 'package:todo_master/view/widget/home/tab_bar_yearly.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    UserName userName = Get.put(UserName());
     return DefaultTabController(
       length: 4,
       child: Scaffold(
@@ -17,17 +23,17 @@ class HomePage extends StatelessWidget {
         floatingActionButton: const FloatingActionButtonAddTask(),
         appBar: AppBar(
           title: Text(
-            '${'welcome'.tr} Beroesaaq',
+            '${'welcome'.tr} ${userName.userPref.getString('username') ?? ''}',
             textAlign: TextAlign.center,
           ),
-          bottom: myTabBar,
+          bottom: myTabBar(),
         ),
         drawer: const MyDrawer(),
-        body: const TabBarView(children: [
-          Center(child: Text("Home Page")),
-          Center(child: Text("Favorites Page")),
-          Center(child: Text("Settings Page")),
-          Center(child: Text("Profile Page")),
+        body: TabBarView(children: const [
+          Center(child: TabBarDaily()),
+          Center(child: TabBarWeekly()),
+          Center(child: TabBarMonthly()),
+          Center(child: TabBarYearly()),
         ]),
       ),
     );

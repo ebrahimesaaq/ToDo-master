@@ -7,4 +7,7 @@ class AppRoutes {
   static const String newLargeTask = '/newLargeTask';
   static const String elementsPage = '/elements';
   static const String userData = '/uData';
+  static const String profile = '/profile';
+  static const String notification = '/notification';
+  static const String dashBoard = '/dash';
 }

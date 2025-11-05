@@ -8,14 +8,19 @@ class PopupMenuLanguageButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     MyLanguageImp myLanguageImp = MyLanguageImp();
-    return Row(
-      children: [
-        IconButton(
-            onPressed: () {
-              myLanguageImp.selectALang(context);
-            },
-            icon: Text('language'.tr)),
-      ],
+    return InkWell(
+      onTap: () {
+        myLanguageImp.selectALang(context);
+      },
+      child: Row(
+        children: [
+          const Icon(Icons.language),
+          const SizedBox(
+            width: 5,
+          ),
+          SizedBox(height: 40, child: Center(child: Text('language'.tr))),
+        ],
+      ),
     );
   }
 }

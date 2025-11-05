@@ -55,7 +55,18 @@ class MyTranslation extends Translations {
           'theTaskSteps': 'خطوات المهمة',
           'elements': 'العناصر',
           'elementsName': 'اسم العنصر',
-          'welcome': 'مرحباً'
+          'welcome': 'مرحباً',
+          'entre_your_name': 'من فضلك ادخل اسمك',
+          'next': 'التالي',
+          'taskTitleRequired': 'عنوان المهمة مطلوب',
+          'categoryRequired': 'الفئة مطلوبة',
+          'priorityRequired': 'الأولوية مطلوبة',
+          'tskNoteRequired': 'ملاحظة المهمة مطلوبة',
+          'elementsRequired': 'عدد العناصر مطلوبة',
+          'dateRequired': 'التاريخ مطلوب',
+          'taskAdded': 'تم اضافة المهمة بنجاح',
+          'progress': 'التقدم',
+          'of': 'من',
         },
         //? English
         'en': {
@@ -110,7 +121,18 @@ class MyTranslation extends Translations {
           'theTaskSteps': 'Task Steps',
           'elements': 'Elements',
           'elementsName': 'Element name',
-          'welcome': 'Welcome'
+          'welcome': 'Welcome',
+          'entre_your_name': 'Please entre your name',
+          'next': 'Next',
+          'taskTitleRequired': 'Task title is required',
+          'categoryRequired': 'Category is required',
+          'priorityRequired': 'Priority is required',
+          'tskNoteRequired': 'Task note is required',
+          'elementsRequired': 'Elements is required',
+          'dateRequired': 'Date is required',
+          'taskAdded': 'Task added successfully',
+          'progress': 'Progress',
+          'of': 'of',
         },
       };
 }
